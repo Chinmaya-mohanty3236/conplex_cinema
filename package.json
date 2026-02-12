@@ -1,0 +1,24 @@
+{
+  "name": "conplex_cinema",
+  "version": "1.0.0",
+  "description": "\"A ticket booking application\"",
+  "license": "ISC",
+  "author": "\"Chinmaya Kumar Mohanty\"",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^17.2.3",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.16.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "qrcode": "^1.5.4"
+  }
+}

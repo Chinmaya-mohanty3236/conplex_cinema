@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Show</title>
+    <!-- <link rel="stylesheet" href="/css/add_show.css"> -->
+     <link rel="stylesheet" href="/css/welcome.css">
+     <style>
+        body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0f1a, #14142b);
+    color: white;
+}
+
+.add-show-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.add-show-container h1 {
+    text-align: center;
+    color: #ff3d00;
+    margin-bottom: 25px;
+}
+
+.show-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-form label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.show-form input,
+.show-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.show-form button {
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff3d00;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-form button:hover {
+    background: #ff5722;
+    transform: scale(1.05);
+}
+
+        </style>
+</head>
+<body>
+
+<%- include("../required/navbar.ejs") %>
+
+<section class="add-show-container">
+
+    <h1>🎬 Add New Show</h1>
+
+    <form action="/admin/shows/new" method="POST" class="show-form">
+
+        <label>Movie</label>
+        <select name="movie_id" required>
+            <option value="">Select Movie</option>
+            <% movies.forEach(movie => { %>
+                <option value="<%= movie.id %>"><%= movie.title %></option>
+            <% }) %>
+        </select>
+
+        <label>Screen</label>
+        <select name="screen_id" required>
+            <option value="">Select Screen</option>
+            <% screens.forEach(screen => { %>
+                <option value="<%= screen.id %>"><%= screen.screen_name %></option>
+            <% }) %>
+        </select>
+
+        <label>Date</label>
+        <input type="date" name="show_date" required>
+
+        <label>Time</label>
+        <input type="time" name="show_time" required>
+
+        <label>Ticket Price (₹)</label>
+        <input type="number" name="price" required min="50">
+
+        <button type="submit">✨ Add Show</button>
+
+    </form>
+
+</section>
+
+</body>
+</html>

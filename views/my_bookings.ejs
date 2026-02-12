@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bookings</title>
+    <!-- <link rel="stylesheet" href="/css/my_bookings.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/welcome.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0f1a, #14142b);
+    color: white;
+}
+
+/* Page Container */
+.bookings-container {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.bookings-container h1 {
+    font-size: 40px;
+    color: #ff3d00;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+/* Grid Layout */
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Booking Card */
+.booking-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.35s ease;
+    position: relative;
+}
+
+/* Hover Effect */
+.booking-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 61, 0, 0.35);
+    border-color: rgba(255, 61, 0, 0.5);
+}
+
+/* Movie Title */
+.booking-card h3 {
+    margin: 0 0 10px;
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+/* Text */
+.booking-card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Ticket Button */
+.booking-card .btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: #ff3d00;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.booking-card .btn:hover {
+    background: #ff5722;
+    transform: scale(1.05);
+}
+
+/* Booking Status */
+.status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2e7d32;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+/* Empty State */
+.no-bookings {
+    margin-top: 30px;
+    color: #888;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+
+<%- include("required/navbar.ejs") %>
+
+<section class="bookings-container">
+
+    <h1>🎟️ My Bookings</h1>
+    <p class="subtitle">Your movie reservations</p>
+
+    <% if (bookings.length === 0) { %>
+        <p class="no-bookings">No bookings yet 😢</p>
+    <% } %>
+
+    <div class="bookings-grid">
+        <% bookings.forEach(b => { %>
+
+            <div class="booking-card">
+                <span class="status">✅ Confirmed</span>
+
+                <h3>🎬 <%= b.title %></h3>
+                <p>📅 <%= b.show_date %></p>
+                <p>⏰ <%= b.show_time %></p>
+                <p>💰 ₹<%= b.total_amount %></p>
+
+                <a href="/ticket/<%= b.id %>" class="btn">
+                    🎫 View Ticket
+                </a>
+            </div>
+
+        <% }) %>
+    </div>
+
+</section>
+
+</body>
+</html>

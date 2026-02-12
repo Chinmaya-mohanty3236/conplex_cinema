@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterForm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/welcome.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #7582ba 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-card h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+        }
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .input-group-text {
+            background: #f8f9fa;
+            border-radius: 10px 0 0 10px;
+            border: 1px solid #ddd;
+            border-right: none;
+        }
+        .btn-dark {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn-dark:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <%- include("required/navbar.ejs") %>
+    
+    <div class="main-content">
+        <div class="login-card">
+            <h2>Register</h2>
+            <form action="/register/new" method="post" novalidate class="needs-validation">
+
+                <div class="mb-3">
+                    <label for="username" class="form-label fw-bold">Username:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" 
+                        class="form-control" 
+                        name="name" 
+                        id="username"
+                        placeholder="Enter the username" required>
+                    </div>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">Email:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="email" 
+                        class="form-control" 
+                        name="email" 
+                        id="email"
+                        placeholder="Enter your email" required>
+                    </div>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="role" class="form-label fw-bold">Role:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user-shield"></i></span>
+                        <select class="form-select" name="role" id="role" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="customer">Customer</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label fw-bold">Password:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" 
+                        class="form-control" 
+                        name="password" 
+                        id="password"
+                        placeholder="Enter the password" required>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-dark w-100 mt-3">Register</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="footer mt-auto">
+        <%- include("required/footer.ejs") %>
+    </footer>
+    
+    <script src="/js/valid.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7PVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

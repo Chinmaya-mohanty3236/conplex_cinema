@@ -1,0 +1,120 @@
+[
+  {
+    "title": "Pushpa 2: The Rule",
+    "description": "The rise of Pushpa continues as he expands his red sandalwood empire and faces powerful enemies.",
+    "duration": 165,
+    "language": "Telugu",
+    "poster_url": "/images/pushpa_2.png",
+    "release_date": "2025-12-05",
+    "status": "now_showing"
+  },
+  {
+    "title": "Kalki 2898 AD",
+    "description": "A futuristic epic inspired by mythology, set in a dystopian world.",
+    "duration": 170,
+    "language": "Hindi",
+    "poster_url": "/images/kalki.png",
+    "release_date": "2025-06-27",
+    "status": "now_showing"
+  },
+  {
+    "title": "Salaar",
+    "description": "Two friends become arch enemies in a violent world of crime and power.",
+    "duration": 155,
+    "language": "Kannada",
+    "poster_url": "/images/salaar.png",
+    "release_date": "2023-12-22",
+    "status": "now_showing"
+  },
+  {
+    "title": "RRR",
+    "description": "A fictional story about two legendary revolutionaries and their journey.",
+    "duration": 182,
+    "language": "Telugu",
+    "poster_url": "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+    "release_date": "2022-03-25",
+    "status": "now_showing"
+  },
+  {
+  "title": "Jawan",
+  "description": "A high-octane action thriller where a man fights corruption and injustice in society.",
+  "duration": 169,
+  "language": "Hindi",
+  "poster_url": "https://upload.wikimedia.org/wikipedia/en/3/39/Jawan_film_poster.jpg",
+  "release_date": "2023-09-07",
+  "status": "now_showing"
+},
+{
+  "title": "Pathaan",
+  "description": "An exiled RAW agent returns to stop a deadly terrorist threat against India.",
+  "duration": 146,
+  "language": "Hindi",
+  "poster_url": "https://upload.wikimedia.org/wikipedia/en/c/c3/Pathaan_film_poster.jpg",
+  "release_date": "2023-01-25",
+  "status": "now_showing"
+},
+{
+  "title": "Dunki",
+  "description": "A heartwarming story about friendship, migration, and the emotional journey of crossing borders.",
+  "duration": 161,
+  "language": "Hindi",
+  "poster_url": "/images/dunki.png",
+  "release_date": "2023-12-21",
+  "status": "now_showing"
+},
+{
+  "title": "Fighter",
+  "description": "An aerial action drama following elite Air Force pilots defending the nation.",
+  "duration": 166,
+  "language": "Hindi",
+  "poster_url": "/images/fighter.png",
+  "release_date": "2024-01-25",
+  "status": "now_showing"
+},
+{
+  "title": "Mardaani 3",
+  "description": "A young lady discovers his connection to powerful ancient astras and a secret society protecting them.",
+  "duration": 167,
+  "language": "Hindi",
+  "poster_url": "/images/mardaani.png",
+  "release_date": "2022-09-09",
+  "status": "now_showing"
+},
+{
+    "title": "Toxic",
+    "description": "A gritty action drama exploring power, crime, and survival in a dark underworld.",
+    "duration": 150,
+    "language": "Hindi",
+    "poster_url": "/images/toxic.png",
+    "release_date": "2026-05-10",
+    "status": "upcoming"
+  },
+  {
+    "title": "O Romeo",
+    "description": "A modern romantic drama inspired by timeless love stories with a contemporary twist.",
+    "duration": 135,
+    "language": "Hindi",
+    "poster_url": "/images/oromeo.png",
+    "release_date": "2026-03-22",
+    "status": "upcoming"
+  },
+  {
+    "title": "Dhurandhar Part 2",
+    "description": "The sequel to the blockbuster action thriller, continuing the saga of vengeance and justice.",
+    "duration": 160,
+    "language": "Hindi",
+    "poster_url": "/images/dhurandhar2.png",
+    "release_date": "2026-08-15",
+    "status": "upcoming"
+  },
+  {
+    "title": "Ramayana",
+    "description": "An epic mythological adaptation retelling the legendary story of Lord Rama.",
+    "duration": 180,
+    "language": "Hindi",
+    "poster_url": "/images/ramayana.png",
+    "release_date": "2026-10-02",
+    "status": "upcoming"
+  }
+
+]

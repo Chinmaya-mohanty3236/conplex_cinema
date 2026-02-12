@@ -1,0 +1,16 @@
+<header class="navbar">
+        <h1 class="logo">🎬 CONNPLEX CINEMA</h1>
+        <div class="nav-links">
+                <% if(currentUser && currentUser.role === "admin") { %>
+                        <a href="/admin/dashboard">Admin Panel</a>
+                <% } %>
+                
+                <% if(!currentUser) { %>
+                <a href="/login" class="btn">Login</a>
+                <a href="/register" class="btn btn-primary">Register</a>
+                <% }else{%>
+                <a href="/my-bookings" class="btn">My Bookings</a>
+                <a href="/logout" class="btn btn-danger">Logout</a>
+                <%}%>
+        </div>
+    </header>
